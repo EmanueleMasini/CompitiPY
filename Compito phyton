@@ -1,0 +1,93 @@
+#es1
+votic1 = int(input("Quanti voti ha il candidato 1? "))
+votic2 = int(input("Quanti voti ha il candidato 2? "))
+totale = (votic1+votic2)
+percentualec1 = ((votic1/totale)*100)
+print("La percentuale del primo candidato è =",percentualec1)
+percentualec2 = ((votic2/totale)*100)
+print("La percentuale del secondo candidato è =",percentualec2)
+
+if (votic1>votic2):
+    print("Il vincitore è il primo partecipante")
+elif (votic1<votic2):
+    print("Il vincitore è il secondo partecipante")
+else:
+    print("Pareggio!!")
+    
+    
+   #es2
+print("Quali sono i voti e il nome del primo candidato?  ")
+v1 = int(input())
+n1 = input()
+print("Quali sono i voti e il nome del secondo candidato?  ")
+v2 = int(input())
+n2 = input()
+lista1 = [n1, n2]
+lista2 = [v1, v2]
+lista1.sort()
+lista2.sort(reverse=True)
+print(lista1)
+print(lista2)
+
+if v1 > v2 :
+    print("Il vincitore è", n1)
+    
+elif v1 < v2 :
+    print("Ha vinto", n2)
+    
+else :
+    print("Pereggio!!")
+
+
+#es3
+lista_stip = []
+count = True
+persona = 0
+ripetizioni = 0
+somma = 0
+while count == True:
+    persona += 1
+    ripetizioni += 1
+    print("Stipendio della persona", persona,"? ")
+    stipendi_p = int(input())
+    lista_stip.append(stipendi_p)
+
+    if ripetizioni == 3:
+        q = int(input("Vuoi uscire? Per uscire scrivi -1, se no premi 0 : "))
+        ripetizioni = 0
+        if q == -1:
+            count = False
+        else:
+            pass
+for i in lista_stip:
+    somma += i
+l = len(lista_stip)
+print(lista_stip)
+mediastip = somma/l
+print(mediastip)
+
+
+
+#es4
+lista_v = []
+count = True
+ng = 0
+ripetizioni = 0
+somma = 0
+while count == True:
+    ng += 1
+    ripetizioni += 1
+    print("Quanti veicoli sono arrivati il giorno", ng,"? ")
+    veicoli = int(input())
+    lista_v.append(veicoli)
+
+    if ripetizioni == 3:
+        q = int(input("Vuoi uscire? Per uscire scrivi 0, se no premi 1 : "))
+        ripetizioni = 0
+        if q == 0:
+            count = False
+        else:
+            pass
+for i in lista_v:
+    somma += i
+print("In", ng,"giorni, sono transitati", somma, "veicoli")
