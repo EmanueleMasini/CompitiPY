@@ -1,0 +1,106 @@
+#es 1
+
+lista = []
+lista2 = []
+program = True
+studenti = 0
+tiri = 0
+
+
+while program == True:
+    studenti += 1
+    tiri += 1
+    print("Qual è il nome della persona", studenti,"? ")
+    nomi = input()
+    lista.append(nomi)
+    print("Qual è il tiro della persona", studenti,"? ")
+    tiri= int(input())
+    lista2.append(tiri)
+    program = (input("Per finire scrivi off, invece per continuare scrivi go.  "))
+    if program == "off":
+        program = False
+    elif program == "go":
+        program = True
+    
+
+lista2.reverse()
+
+print("Il numero più alto è", lista2[0])
+
+
+#es 2
+
+listanomi = []
+listamax = []
+listamin = []
+listaescursione = []
+program = True
+città = 0
+Temperaturamax = 0
+Temperaturamin = 0
+Temperaturaescursione = 0
+escursione = int(input("Quant'è l'escursione termica da definire?  "))
+
+while program == True:
+    città += 1
+    Temperaturamax += 1
+    Temperaturamin += 1
+    Temperaturaescursione += 0
+    print("Qual è il nome della città", città,"? ")
+    nomi = input()
+    listanomi.append(nomi)
+    print("Temperatura massima raggiunta oggi a", nomi,"? ")
+    temp1 = int(input())
+    listamax.append(temp1)
+    print("Temperatura minima raggunta oggi a", nomi,"? ")
+    temp2 = int(input())
+    listamin.append(temp2)
+    esctermica = temp1 - temp2
+    if esctermica > escursione:
+         listaescursione.append(esctermica)
+    else:
+         pass
+    perfinire = (input("Se hai finito le città puoi uscire scrivendo off, invece se vuoi andare avanti premi go.  "))
+    if perfinire == "off":
+        program = False
+    elif perfinire == "go":
+        program = True 
+        
+
+#es3
+
+lung = int (input ("Qual è  il numero delle cifre binarie"))
+somma = 0
+for n in range (lung):
+    cifra = int (input ("Elenca le cifre a partire da destra"))
+    valore = (cifra*2**n)
+    somma += valore
+
+print (somma)
+
+
+ #es4
+ 
+ cifre = []
+resti = []
+contatore = -1
+num = int(input("Inserisci il numero decimale che vuoi convertire in binario. "))
+while True:
+    if num == 0:
+        break
+    else:     
+        resto = num % 2
+        resti.append(resto)        
+        num = num//2
+resti.reverse()
+restitot = len(resti)-1
+while True:    
+    potenza = pow(10, restitot)
+    cifra = resti[contatore +1] * potenza
+    restitot = restitot - 1 
+    contatore = contatore + 1
+    cifre.append(cifra)
+    if restitot == -1:
+        break
+numerobinario = sum(cifre)
+print("Il numero binario  è",numerobinario)
