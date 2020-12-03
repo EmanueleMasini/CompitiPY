@@ -81,26 +81,20 @@ print (somma)
 
  #es4
  
- cifre = []
-resti = []
-contatore = -1
-num = int(input("Inserisci il numero decimale che vuoi convertire in binario. "))
+nbin = []
+num = int (input ("Scrivi un numero naturale  "))
 while True:
-    if num == 0:
+
+    quoz = int (num/2)
+    resto = num % 2
+    if resto == 1:
+        nbin.append (1)
+    else:
+        nbin.append (0)
+    num = quoz
+    
+    if quoz == 0:
         break
-    else:     
-        resto = num % 2
-        resti.append(resto)        
-        num = num//2
-resti.reverse()
-restitot = len(resti)-1
-while True:    
-    potenza = pow(10, restitot)
-    cifra = resti[contatore +1] * potenza
-    restitot = restitot - 1 
-    contatore = contatore + 1
-    cifre.append(cifra)
-    if restitot == -1:
-        break
-numerobinario = sum(cifre)
-print("Il numero binario  è",numerobinario)
+
+nbin.reverse ()
+print (nbin)
