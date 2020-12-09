@@ -1,0 +1,44 @@
+#es1
+
+parola = input("inserisci una parola")
+if parola == parola[::-1]:
+    print("questa parola è palindroma")
+elif parola != parola[::-1]:
+    print("questa parola non è palindroma")
+    
+#es2
+
+lista = []
+lista2 = []
+xandare = True
+while xandare == True:
+    p1 = input(" Scrivi delle parole che vanno aggiunte alla lista, scrivi off per uscire " )
+    if p1 == "off":
+        xandare = False
+    else:
+        lista.append(p1)
+narg = len(lista)
+for num in range(narg):
+    num2 = len(lista[num])
+    lista2.append(num2)
+print(lista2)
+
+#es4
+
+Lq = int(input("Qual è il lato del quadrato? "))
+Aq = Lq**2
+print("L'area del quadrato è:", Aq)
+
+Hr = int(input("Qual è l'altezza del rettangolo? "))
+Br = int(input("Qual è la base del rettangolo? "))
+Ar = Hr * Br
+print("L'area del rettangolo è:", Ar)
+
+Ht = int(input("Qual è l'altezza del triangolo? "))
+Bt = int(input("Qual è la base del triangolo?"))
+At = (Ht * Bt) / 2
+print("L'area del triangolo è:", At)
+
+Rc = int(input("Qual è il raggio del cerchio? "))
+Ac = (Rc**2) * 3.14
+print("L'area del cerchio è:", Ac)
