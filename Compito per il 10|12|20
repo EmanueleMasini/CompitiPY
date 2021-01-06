@@ -1,4 +1,4 @@
-#es1
+#es 1 
 
 parola = input("inserisci una parola")
 if parola == parola[::-1]:
@@ -6,7 +6,7 @@ if parola == parola[::-1]:
 elif parola != parola[::-1]:
     print("questa parola non è palindroma")
     
-#es2
+#es 2
 
 lista = []
 lista2 = []
@@ -23,7 +23,7 @@ for num in range(narg):
     lista2.append(num2)
 print(lista2)
 
-#es4
+#es 4
 
 Lq = int(input("Qual è il lato del quadrato? "))
 Aq = Lq**2
