@@ -1,0 +1,33 @@
+#es 13 pag 72
+
+numero = int(input("Scrivi un numero e ti dirò se è pari o dispari "))
+if numero % 2 == 0:
+    print("Il numero è pari")
+else:
+    print("Il numero è dispari")
+
+#es 14 pag 72
+
+numeroA = int(input("Scrivi il numero A "))
+numeroB = int(input("Scrivi il numero B "))
+prodotto = numeroA * numeroB
+if prodotto > 10 :
+    print(numeroA - numeroB)
+elif prodotto < 10:
+    print( numeroA + numeroB)
+else :
+    print( numeroA + numeroB)
+    
+#es 32 pag 73
+
+numeroA = int(input("Scrivi il valore A "))
+numeroB = int(input("Scrivi il valore B "))
+
+if numeroA == 0 and numeroB == 0 :
+    print("L'equazione è indeterminata")
+elif numeroA != 0 and numeroB == 0:
+    print("Il risultato dell'equazione è x=0")
+elif numeroA == 0 and numeroB != 0:
+    print("L'equazione è impossibile")
+elif numeroA != 0 and numeroB != 0:
+    print("il risultato dell'equazione è x=-b/a")
