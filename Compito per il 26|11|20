@@ -1,4 +1,5 @@
-#es1
+#es1 pag 73
+
 votic1 = int(input("Quanti voti ha il candidato 1? "))
 votic2 = int(input("Quanti voti ha il candidato 2? "))
 totale = (votic1+votic2)
@@ -15,7 +16,8 @@ else:
     print("Pareggio!!")
     
     
-   #es2
+#es2 pag 73
+
 print("Quali sono i voti e il nome del primo candidato?  ")
 v1 = int(input())
 n1 = input()
@@ -39,7 +41,8 @@ else :
     print("Pereggio!!")
 
 
-#es3
+#es3 pag 73
+
 lista_stip = []
 count = True
 persona = 0
@@ -68,7 +71,8 @@ print(mediastip)
 
 
 
-#es4
+#es4 pag 73
+
 lista_v = []
 count = True
 ng = 0
