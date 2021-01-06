@@ -1,4 +1,4 @@
-#es 1
+#es 1 pag 73
 
 lista = []
 lista2 = []
@@ -28,7 +28,7 @@ lista2.reverse()
 print("Il numero più alto è", lista2[0])
 
 
-#es 2
+#es 2 pag 73
 
 listanomi = []
 listamax = []
@@ -67,7 +67,7 @@ while program == True:
         program = True 
         
 
-#es3
+#es 3 pag 73
 
 lung = int (input ("Qual è  il numero delle cifre binarie"))
 somma = 0
@@ -79,7 +79,7 @@ for n in range (lung):
 print (somma)
 
 
- #es4
+#es 4 pag 73
  
 nbin = []
 num = int (input ("Scrivi un numero naturale  "))
