@@ -1,0 +1,41 @@
+# Con la parabola y = ax^2 + bx+c, definisci due funzioni per calcolare: vertice e fuoco.
+
+
+import math
+
+def calc_delta(a, b, c):
+    der = math.pow(b, 2) - 4 * a * c
+    return der
+
+def calc_vertice(a, b, c):
+    delta = calc_delta(a, b, c)
+    Xv = -(b/(2*a))
+    Yv = -(delta/(4*a))
+    return Xv, Yv
+
+def calc_fuoco(a, b, c):
+    delta = calc_delta(a, b, c)
+    Xf = -(b/(2*a))
+    Yf = (1 - delta)/(4*a)
+    return Xf, Yf
+
+def main():
+    a = int(input("Scrivi il valore di a "))
+    b = int(input("Scrivi il valore di b "))
+    c = int(input("Scrivi il valore di c "))
+
+    scelta = int(input("Scegli cosa calcolare, premi 1 per conoscere il vertice, 2 per il fuoco, premi 3 per conoscere sia il vertice sia il fuoco, oppure premi 00 per uscire ")) 
+    
+    if scelta == 1:
+        print(calc_vertice(a, b, c))
+    elif scelta == 2:
+        print(calc_fuoco(a, b, c))
+    elif scelta == 3:
+        print(calc_vertice(a, b, c))
+        print(calc_fuoco(a, b, c))
+    elif scelta == 00:
+        print("Ok, ciao!")
+    else:
+        print("OPS! hai sbagliato, riprova...")   
+
+main() 
