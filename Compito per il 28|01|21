@@ -1,0 +1,51 @@
+#es 15 pag 189
+#Dato un elenco di nazioni, visualizza la sua capitale e se la nazione scritta non è presente nell'elenco, segnalare errore
+
+naz = ["Italia", "Francia", "Germania", "Spagna", "Inghilterra", "Grecia", "Turchia", "Portogallo"]
+cap = ["Roma", "Parigi", "Berlino", "Madrid", "Londra", "Atene", "Ankara", "Lisbona"]
+print("Adesso potrai inserire il nome di uno stato tra i seguenti: Italia, Francia, Germania, Spagna, Inghilterra, Grecia, Turchia, Portogallo e ne conoscerai la capitale")
+
+while True:
+    scelta = input("Scrivi la nazione desiderata: ").capitalize()
+    numero = naz.index(scelta)
+    if scelta in naz:
+        print("Ecco la capitale di", scelta, ":", cap[numero])
+        scelta2 = int(input("Vuoi saperne un altra? Premi 0 per inserirne un altra e 1 per uscire "))
+        if scelta2 == 1:
+            break
+        elif scelta2 == 0:
+            print("Adesso dovrai inserirne un altra")
+        else:
+            print("Hai scritto il numero sbagliato")
+            break
+    elif scelta not in naz:
+        print("La nazione che hai scelto non è tra quelle selezionabili, inseriscila nuovamente ")
+    else:
+        pass
+        
+#es 16 pag 189
+#Risolvere il problema precedente partendo da due liste che generano un dizionario con la nazionecome chiave e la capitale come valore
+
+naz = ["Italia", "Francia", "Germania", "Spagna", "Inghilterra", "Grecia", "Turchia", "Portogallo"]
+cap = ["Roma", "Parigi", "Berlino", "Madrid", "Londra", "Atene", "Ankara", "Lisbona"]
+diz = {}
+numero = len(naz)
+for num in range(0, numero):
+    diz[naz[num]] = cap[num]
+print("Adesso potrai inserire il nome di uno stato tra i seguenti: Italia, Francia, Germania, Spagna, Inghilterra, Grecia, Turchia, Portogallo e ne conoscerai la capitale")
+while True:
+    scelta = input("Scrivi la nazione desiderata: ").capitalize()
+    if scelta in diz.keys():
+        print("La capitale è: ", diz[scelta])
+        scelta2 = int(input("Vuoi saperne un altra? Premi 0 per inserirne un altra e 1 per uscire "))
+        if scelta2 == 1:
+            break
+        elif scelta2 == 0:
+            print("Ora dovrai inserirne un altra ")
+        else:
+            print("Hai scritto il numero sbagliato")
+            break
+    elif scelta not in diz.keys():
+        print("La nazione che hai scelto non è tra quelle selezionabili, inseriscila nuovamente ")
+    else:
+        pass
