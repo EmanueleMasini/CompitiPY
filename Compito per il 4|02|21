@@ -6,7 +6,7 @@ naz = ["Italia", "Francia", "Germania", "Spagna", "Inghilterra", "Grecia", "Turc
 cap = ["Roma", "Parigi", "Berlino", "Madrid", "Londra", "Atene", "Ankara", "Lisbona"]
 diz = {}
 num = len(naz)
-for num in range(0, numo):
+for num in range(0, num):
     diz[naz[num]] = cap[num]
 diz2 = dict(zip(diz.values(), diz.keys()))
 print("Inserisci il nome di una capitale tra le seguenti: Roma, Parigi, Berlino, Madrid, Londra, Atene, Ankara, Lisbona  e ne conoscerai la nazione") 
@@ -14,7 +14,7 @@ while True:
     scelta = input("Scrivi la capitale desiderata: ").capitalize()
     if scelta in diz2.keys():
         print("La nazione è: ", diz2[scelta])
-        scelta2 = int(input("Se vuoi saperne un'altra premi 0 e 1 per uscire"))
+        scelta2 = int(input("Se vuoi saperne un'altra premi 0 e 1 per uscire: "))
         if scelta2 == 1:
             break
         elif scelta2 == 0:
@@ -25,3 +25,4 @@ while True:
     elif scelta not in diz2.keys():
         print("La capitale che hai scelto non è tra quelle selezionabili, inseriscila nuovamente")
     else:
+        pass
