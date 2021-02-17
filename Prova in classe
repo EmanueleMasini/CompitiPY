@@ -55,3 +55,35 @@ def es6():
 es6()
 
 Verifica.stampa_voto()
+
+def es7():
+    es=Verifica.inizia_esercizio(7)
+    lista = es.dati
+    somma = 0 
+    for n in lista:
+        if n > 5:
+            somma += n
+        else:
+            somma += 0
+    es.consegna(somma)
+
+def es8():
+    es=Verifica.inizia_esercizio(8)
+    lista = es.dati
+    somma = 0 
+    num = 0
+    num1 = len(lista) % 2 
+    if num1 != 0 :
+        lista.pop()
+    else:
+        pass
+    while True:
+        somma += lista[-1]
+        lista.pop
+        lista.pop
+        if len(lista) == 0:
+            break
+        else:
+            pass
+    es.consegna(somma)
+es8()
