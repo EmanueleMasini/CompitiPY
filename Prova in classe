@@ -91,10 +91,8 @@ def es9():
     lista = es.dati
     somma = 0
     for n in lista:
-        if (n % 2) == 0:
+        if (n % 2) != 0:
             somma += n
-        else:
-            somma +=0
     es.consegna(somma)
 
 
