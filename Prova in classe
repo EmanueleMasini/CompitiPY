@@ -16,25 +16,24 @@ def es1():
     es=Verifica.inizia_esercizio(1)
     risposta = es.dati
     es.consegna(risposta.lower())
-es1()
+
 
 def es2():
     es=Verifica.inizia_esercizio(2)
     numero = es.dati
     es.consegna(numero*numero)
-es2()
+
 
 def es3():
     es=Verifica.inizia_esercizio(3)
     dic = es.dati
     es.consegna(dic.get("cognome"))
-es3()
 
 def es4():
     es=Verifica.inizia_esercizio(4)
     lista = es.dati
     es.consegna(len(lista))
-es4()
+
 
 def es5():
     es=Verifica.inizia_esercizio(5)
@@ -43,7 +42,7 @@ def es5():
     for parola in lista:
         lista2.append(parola.upper())
     es.consegna(lista2)
-es5()
+
 
 def es6():
     es=Verifica.inizia_esercizio(6)
@@ -52,9 +51,7 @@ def es6():
     for n in lista:
         somma += n 
     es.consegna(somma)
-es6()
 
-Verifica.stampa_voto()
 
 def es7():
     es=Verifica.inizia_esercizio(7)
@@ -66,6 +63,7 @@ def es7():
         else:
             somma += 0
     es.consegna(somma)
+
 
 def es8():
     es=Verifica.inizia_esercizio(8)
@@ -86,4 +84,45 @@ def es8():
         else:
             pass
     es.consegna(somma)
-es8()
+
+
+def es9():
+    es=Verifica.inizia_esercizio(9)
+    lista = es.dati
+    somma = 0
+    for n in lista:
+        if (n % 2) == 0:
+            somma += n
+        else:
+            somma +=0
+    es.consegna(somma)
+
+
+def es10():
+    es=Verifica.inizia_esercizio(10)
+    lista = es.dati
+    lista.sort()
+    es.consegna(lista)
+
+
+def es11():
+    es=Verifica.inizia_esercizio(11)
+    lista = es.dati
+    for i in range(len(lista)):
+        lista[i] = lista[i].lower()
+    lista.sort()
+    es.consegna(lista)
+
+    
+def es12():
+    es=Verifica.inizia_esercizio(12)
+    lista = es.dati
+    lista2 = []
+    for n in lista:
+        n -= 1 
+        lista.append(n)
+    es.consegna(lista)
+
+
+Verifica.stampa_voto()
+
